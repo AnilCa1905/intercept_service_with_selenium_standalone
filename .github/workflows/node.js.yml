@@ -29,6 +29,6 @@ jobs:
       uses: cinotify/github-action@main
       with:
         to: 'anilcaalexander@gmail.com'
-        subject: 'building main'
+        subject: 'GitHub actions'
         body: 'This is the notification from gitHub actions'
     
