@@ -25,4 +25,10 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm run wdio
+    - name: Email Notification
+      uses: cinotify/github-action@main
+      with:
+        to: 'anilcaalexander@gmail.com'
+        subject: 'building main'
+        body: 'This is a notification from GitHub actions.'
     
