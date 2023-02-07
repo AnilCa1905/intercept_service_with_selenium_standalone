@@ -29,7 +29,7 @@ jobs:
       if: success() || failure()
       uses: cinotify/github-action@main
       with:
-        to: 'anilcaalexander@gmail.com'
+        to: 'anilalexander195@gmail.com'
         subject: 'GitHub actions'
         body: 'Build job of ${{github.repository}} completed successfully!'
     
