@@ -30,6 +30,6 @@ jobs:
       uses: cinotify/github-action@main
       with:
         to: 'anilalexander195@gmail.com'
-        subject: 'GitHub actions'
+        subject: 'GitHub Actions'
         body: 'Build job of ${{github.repository}} completed successfully!'
     
