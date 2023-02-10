@@ -114,7 +114,10 @@ export const config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
    // services: ['selenium-standalone','intercept'],
-    services: ['selenium-standalone','intercept'],
+    //services: ['selenium-standalone','intercept'],
+        services: [
+        ['selenium-standalone', { drivers: { firefox: '0.29.1', chrome: true, chromiumedge: 'latest' } },'intercept']
+    ],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
