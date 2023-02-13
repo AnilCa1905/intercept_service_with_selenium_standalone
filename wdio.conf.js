@@ -1,4 +1,3 @@
-const   chromiumedge=  { version: '85.0.564.70' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
 
 export const config = {
     //
@@ -121,13 +120,18 @@ export const config = {
 //         ['selenium-standalone', { drivers: { firefox: '0.29.1', chrome: true, chromiumedge: 'latest' } },'intercept']
 //     ],
     
-    services: [
-        ['selenium-standalone', {
-            logPath: 'logs',
-            installArgs: { chromiumedge }, // drivers to install
-            args: { chromiumedge } // drivers to use
-        }]
-    ],
+  services : [
+    [
+      "selenium-standalone",
+      {
+        "drivers": {
+          "edge": {
+            "version": "4.15063"
+          }
+        }
+      },
+    ]
+  ],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
