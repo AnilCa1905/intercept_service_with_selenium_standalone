@@ -1,3 +1,5 @@
+const   chromiumedge=  { version: '85.0.564.70' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+
 export const config = {
     //
     // ====================
@@ -115,8 +117,16 @@ export const config = {
     // commands. Instead, they hook themselves up into the test process.
    // services: ['selenium-standalone','intercept'],
     //services: ['selenium-standalone','intercept'],
-        services: [
-        ['selenium-standalone', { drivers: { firefox: '0.29.1', chrome: true, chromiumedge: 'latest' } },'intercept']
+//         services: [
+//         ['selenium-standalone', { drivers: { firefox: '0.29.1', chrome: true, chromiumedge: 'latest' } },'intercept']
+//     ],
+    
+    services: [
+        ['selenium-standalone', {
+            logPath: 'logs',
+            installArgs: { chromiumedge }, // drivers to install
+            args: { chromiumedge } // drivers to use
+        }]
     ],
 
     // Framework you want to run your specs with.
